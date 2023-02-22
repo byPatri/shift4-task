@@ -1,12 +1,15 @@
+import Card from './components/card';
+
 import './App.scss'
 
 function App() {
 
   return (
-    <div className="app">
-      <div className="header"></div>
-      <button>Cancel</button>
-      <button>Continue</button>
+    <div className='app'>
+      <header>Natur.ally</header>
+      <div className='content'>
+        <Card />
+      </div>
     </div>
   )
 }

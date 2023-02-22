@@ -1,0 +1,56 @@
+.card {
+    width: 600px;
+}
+
+.header {
+    background: #FFDBCB;
+    width: 100%;
+    height: 128px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+}
+
+.action {
+    display: flex;
+    gap: 11px;
+}
+
+button.cancel {
+   padding: 16px 24px 16px 24px;
+   border-radius: 5px;
+   border-color: #595D7B;
+   color: #595D7B;
+}
+
+button.continue {
+    padding: 16px 24px 16px 24px;
+    border-radius: 5px;
+    background: #423C66;
+    color: #FFFFFF;
+}
+
+.summary {
+    font-family: 'Work Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #1E2A32;
+}
