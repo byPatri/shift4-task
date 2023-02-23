@@ -2,13 +2,14 @@ import { useState } from 'react';
 import Actions from '../actions';
 import CartHeader from '../cardHeader';
 import MonthPicker from '../monthPicker';
+import Summary from '../summary';
 import Total from '../total';
 import './index.scss'
 
 function Card() {
   const [amount, setAmount] = useState<string>()
   const [date, setDate] = useState(new Date())
-//Display value as money (1,234.56)
+
   const changeDate = (months: number) => {
     const updatedDate = new Date();
     updatedDate.setMonth(date.getMonth() + months)
@@ -26,16 +27,10 @@ function Card() {
               <span className='input_label'>I can donate</span>
               <input 
                 value={amount}
-                type="number"
+                type="currency"
                 className="input_icon"
                 placeholder='0.00'
-                pattern="[0-9]*"
-                data-politespace
-                data-grouplength="3"
-                data-delimiter=","
-                onChange={(e) => {
-                  setAmount(e.target.value)
-                }}
+                onChange={(e) => setAmount(e.target.value)}
               />
             </div>
             <div className='input_group'>
@@ -47,7 +42,7 @@ function Card() {
             </div>
           </div>
           <Total amount={amount} date={date} />
-          <div className='summary'>You're will be sending <b>${amount || 0}</b> every month, until <b>{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</b>. Thank you!</div>
+          <Summary amount={amount} date={date} />
         </div>
         <Actions />
       </div>

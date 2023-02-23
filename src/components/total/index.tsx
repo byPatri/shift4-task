@@ -11,10 +11,16 @@ const getTotal = (date: Date, amount?: string) => {
 }
 
 function Total({ date, amount }: { date: Date, amount?: string }) {
+  const total = getTotal(date, amount);
+  const totalLabel = total.toLocaleString('en-US', {
+    style: 'currency',
+    currency: 'USD',
+    maximumFractionDigits: 0,
+  })
   return (
     <div className='total'>
-        <span>Total amount:</span>
-        <span>${getTotal(date, amount)}</span>
+        <span className='total_label'>Total amount</span>
+        <span className='total_amount'>{totalLabel}</span>
     </div> 
 )
 }
