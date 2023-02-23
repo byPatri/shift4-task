@@ -4,13 +4,8 @@
 
     @media (max-width: 600px) {
         width: 100%;
+        height: 100%;
     }
-}
-
-.header {
-    background: #FFDBCB;
-    width: 100%;
-    height: 128px;
 }
 
 .container {
@@ -53,8 +48,8 @@ input.input_icon:focus-visible  {
 .input_label {
     font-family: 'FontWork Sans';
     font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
     padding-bottom: 6px;
 }
 
@@ -88,8 +83,8 @@ input.input_icon:focus-visible  {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.25rem;
     margin: 8px;
 }
 
@@ -108,8 +103,8 @@ input.input_icon:focus-visible  {
     font-family: 'Work Sans';
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
-    line-height: 140%;
+    font-size: 0.75rem;
+    line-height: 1rem;
     color: #1E2A32;
 
     text-align: center;
@@ -120,12 +115,4 @@ input.input_icon:focus-visible  {
 
     background: #F4F8FA;
     border-radius: 5px;
-}
-
-.total {
-    width: 100%;
-    margin-top: 32px;
-    padding: 0 16px;
-    display: flex;
-    justify-content: space-between;
 }

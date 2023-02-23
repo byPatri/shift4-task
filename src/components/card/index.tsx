@@ -1,21 +1,9 @@
 import { useState } from 'react';
-import logo from '../../assets/giving-icon.png';
 import Actions from '../actions';
+import CartHeader from '../cardHeader';
 import MonthPicker from '../monthPicker';
+import Total from '../total';
 import './index.scss'
-
-function differenceInMonths(date: Date) {
-  const now = new Date();
-  return date.getMonth() - now.getMonth() + 12 * (date.getFullYear() - now.getFullYear())
-}
-
-const getTotal = (date: Date, amount?: string) => {
-  console.log(amount, date);
-  if(!amount){
-    return 0
-  }
-  return parseInt(amount) * differenceInMonths(date)
-}
 
 function Card() {
   const [amount, setAmount] = useState<string>()
@@ -30,11 +18,7 @@ function Card() {
 
   return (
     <div className='card'>
-      <div className='header'>
-        <img src={logo} alt="card-logo" />
-        <div>The giving block</div>
-        <div>Set up your donation goal!</div>
-      </div>
+      <CartHeader />
       <div className='container'>
         <div className='content'>
           <div className='inputs'>
@@ -62,10 +46,7 @@ function Card() {
               />
             </div>
           </div>
-          <div className='total'>
-            <span>Total amount:</span>
-            <span>${getTotal(date, amount)}</span>
-          </div> 
+          <Total amount={amount} date={date} />
           <div className='summary'>You're will be sending <b>${amount || 0}</b> every month, until <b>{date.toLocaleString('default', { month: 'long', year: 'numeric' })}</b>. Thank you!</div>
         </div>
         <Actions />
