@@ -22,21 +22,22 @@ function Card() {
   return (
     <div className='card'>
       <CartHeader />
-      <div className='container'>
-        <div className='content'>
-          <div className='inputs'>
-            <div className='input_group'>
-              <span className='input_label'>I can donate</span>
+      <div className='card_container'>
+        <div className='card_content'>
+          <div className='card_inputs'>
+            <div className='card_input_group'>
+              <span className='card_input_label'>I can donate</span>
               <input 
                 value={amount}
                 type="currency"
-                className="input_icon"
+                className="card_input_icon"
                 placeholder='0.00'
+                step="0.01"
                 onChange={(e) => setAmount(e.target.value)}
               />
             </div>
-            <div className='input_group'>
-              <span className='input_label'>Every month until</span>
+            <div className='card_input_group'>
+              <span className='card_input_label'>Every month until</span>
               <MonthPicker 
                 date={date} 
                 changeDate={changeDate} 

@@ -14,8 +14,7 @@ function Total({ date, amount }: { date: Date, amount?: string }) {
   const total = getTotal(date, amount);
   const totalLabel = total.toLocaleString('en-US', {
     style: 'currency',
-    currency: 'USD',
-    maximumFractionDigits: 0,
+    currency: 'USD'
   })
   return (
     <div className='total'>
