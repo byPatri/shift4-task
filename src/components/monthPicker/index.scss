@@ -21,6 +21,14 @@
     width: 24px;
     height: 24px;
     margin: 18px 12px;
+    cursor: pointer;
+}
+.picker_chevron:hover {
+    background: #F3F5FE
+}
+
+.picker_chevron:active {
+    background: #E8EAF2;
 }
 
 .picker_date {

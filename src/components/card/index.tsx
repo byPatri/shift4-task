@@ -7,13 +7,15 @@ import Total from '../total';
 import './index.scss'
 
 function Card() {
-  const [amount, setAmount] = useState<string>()
+  const [amount, setAmount] = useState<string>('')
   const [date, setDate] = useState(new Date())
 
   const changeDate = (months: number) => {
+    const now = new Date();
+    const yearsDiffInMonths = (date.getFullYear() - now.getFullYear()) * 12
     const updatedDate = new Date();
-    updatedDate.setMonth(date.getMonth() + months)
-    if(updatedDate >= new Date())
+    updatedDate.setMonth(date.getMonth() + months + yearsDiffInMonths)
+    if(updatedDate >= now)
     setDate(updatedDate);
   }
 
