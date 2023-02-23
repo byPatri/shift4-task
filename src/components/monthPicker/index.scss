@@ -1,0 +1,45 @@
+.picker {
+    width: 100%;
+
+    border: solid 1px #E9EEF2;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // font-family: 'Rubik';
+    // font-size: 24px;
+    // font-weight: 500;
+    // line-height: 28px;
+    // letter-spacing: 0px;
+    // text-align: left;
+    
+}
+
+.picker_chevron {
+    width: 24px;
+    height: 24px;
+    margin: 18px 12px;
+}
+
+.picker_date {
+    display: flex;
+    flex-direction: column;
+}
+
+.picker_month {
+    //font-family: 'Rubik';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+}
+
+.picker_year {
+    //font-family: 'Work Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    text-align: center;
+}
