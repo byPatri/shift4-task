@@ -7,14 +7,15 @@ function differenceInMonths(date: Date) {
 
 const getTotal = (date: Date, amount?: string) => {
   if(!amount) return 0;
-  return parseInt(amount) * differenceInMonths(date);
+  return parseFloat(amount) * differenceInMonths(date);
 }
 
 function Total({ date, amount }: { date: Date, amount?: string }) {
   const total = getTotal(date, amount);
   const totalLabel = total.toLocaleString('en-US', {
     style: 'currency',
-    currency: 'USD'
+    currency: 'USD',
+    maximumFractionDigits: 2
   })
   return (
     <div className='total'>
