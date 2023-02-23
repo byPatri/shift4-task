@@ -24,8 +24,24 @@
         display: none;
     }
  }
+
+ .cancel:hover {
+    background: rgba(178, 167, 244, 0.1)
+ }
  
+ .cancel:active {
+    background: rgba(178, 167, 244, 0.25)
+ }
+
 .continue {
     background: #423C66;
     color: #FFFFFF;
+}
+
+.continue:hover {
+    background: #645D93;
+}
+
+.continue:active {
+    background: #241E47;
 }
