@@ -10,9 +10,11 @@ function CartHeader(){
                 className="close-button"
                 alt="close button"
             />
-            <img src={logo} alt="card-logo" />
-            <span className='card-header_title'>The giving block</span>
-            <span className='card-header_subtitle'>Set up your donation goal!</span>
+            <img src={logo} className="card-header_logo" alt="card-logo" />
+            <div className='card-header_text'>
+                <span className='card-header_title'>The giving block</span>
+                <span className='card-header_subtitle'>Set up your donation goal!</span>
+            </div>
       </div>
     )
 }

@@ -15,8 +15,16 @@
 header {
   background: #FFFFFF;
   height: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 
   @media (max-width: 600px) {
     display: none;
   }
+}
+
+.header_logo {
+  padding-left: 40px;
+  height: 32px;
 }
