@@ -1,5 +1,5 @@
 import Card from './components/card';
-import logo from './assets/logo.svg';
+import logo from './assets/icons/logo.svg';
 import './App.scss'
 
 function App() {

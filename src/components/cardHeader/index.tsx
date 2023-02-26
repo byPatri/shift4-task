@@ -1,5 +1,5 @@
-import logo from '../../assets/giving_icon.svg';
-import close from '../../assets/close_btn.svg';
+import logo from '../../assets/icons/giving_icon.svg';
+import close from '../../assets/icons/close_btn.svg';
 import './index.scss';
 
 function CartHeader(){

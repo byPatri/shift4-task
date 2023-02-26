@@ -1,5 +1,5 @@
-import chevronLeft from '../../assets/chevron_left.svg';
-import chevronRight from '../../assets/chevron_right.svg';
+import chevronLeft from '../../assets/icons/chevron_left.svg';
+import chevronRight from '../../assets/icons/chevron_right.svg';
 import './index.scss'
 
 function MonthPicker({ date, changeDate }: { date: Date, changeDate: (months: number) => void}) {

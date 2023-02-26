@@ -23,7 +23,6 @@
     }
 
     &_input_label {
-        font-family: 'FontWork Sans';
         font-weight: 500;
         font-size: 0.875rem;
         line-height: 1.125rem;
@@ -51,7 +50,7 @@
     &_input_icon {
         height: 60px;
         padding: 16px 16px 16px 40px;
-        background: url("../../assets/dollar.svg") no-repeat left;
+        background: url("../../assets/icons/dollar.svg") no-repeat left;
         background-size: 24px;
         background-position: 8px;
         border: solid 1px #E9EEF2;
