@@ -47,16 +47,6 @@
         height: 84px;
     }
     
-    &_input_icon {
-        height: 60px;
-        padding: 16px 16px 16px 40px;
-        background: url("../../assets/icons/dollar.svg") no-repeat left;
-        background-size: 24px;
-        background-position: 8px;
-        border: solid 1px #E9EEF2;
-        border-radius: 4px;
-    }
-    
     &_input_icon:focus-visible  {
         border: solid 1px #423C66;
         outline: none;

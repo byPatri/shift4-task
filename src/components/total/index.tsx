@@ -2,7 +2,7 @@ import './index.scss'
 
 function differenceInMonths(date: Date) {
   const now = new Date();
-  return date.getMonth() - now.getMonth() + 12 * (date.getFullYear() - now.getFullYear());
+  return (date.getMonth() - now.getMonth() + 12 * (date.getFullYear() - now.getFullYear())) + 1;
 }
 
 const getTotal = (date: Date, amount?: string) => {
