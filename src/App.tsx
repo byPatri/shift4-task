@@ -1,5 +1,6 @@
 import Card from './components/card';
 import logo from './assets/icons/logo.svg';
+import Modal from './components/modal';
 import './App.scss'
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
         />
       </header>
       <div className='content'>
-        <Card />
+        <Modal>
+          <Card />
+        </Modal>
       </div>
     </div>
   )

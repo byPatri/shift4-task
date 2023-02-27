@@ -1,7 +1,7 @@
 @import '../../styles/variables/colors';
 
 .card {
-    width: 600px;
+    width: 100%;
     background: $white;
 
     @media (max-width: 600px) {
