@@ -49,6 +49,10 @@
         flex-basis: 100%;
         max-width: 248px;
         height: 84px;
+
+        @media (max-width: 600px) {
+            max-width: 100%;
+        }
     }
 }
 

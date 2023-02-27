@@ -28,6 +28,11 @@ function AmountInput({ amount, setAmount }: { amount: string, setAmount: (value:
           const formattedAmount = formatAmount(amount, e.target.value);
           setAmount(formattedAmount);
         }}
+        onBlur={(e) => {
+          if(amount.match(/\.$/g)){
+            setAmount(amount.replace(/\.$/g, ''));
+          }
+        }}
     />
   )
 }

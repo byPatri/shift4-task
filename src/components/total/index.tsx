@@ -11,12 +11,12 @@ const getTotal = (date: Date, amount?: string) => {
   return parseFloat(amountToNumber) * differenceInMonths(date);
 }
 
-function Total({ date, amount }: { date: Date, amount?: string }) {
+function Total({ date, amount = '' }: { date: Date, amount: string }) {
   const total = getTotal(date, amount);
   const totalLabel = total.toLocaleString('en-US', {
     style: 'currency',
     currency: 'USD',
-    maximumFractionDigits: 2
+    maximumFractionDigits:  /\./g.test(amount) ? 2 : 0
   })
   return (
     <div className='total'>
