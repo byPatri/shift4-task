@@ -1,9 +1,11 @@
+@import '../../styles/variables/colors';
+
 .picker {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: solid 1px #E9EEF2;
+    border: solid 1px $blueGray50;
     border-radius: 4px;
 }
 
@@ -27,15 +29,17 @@
 }
 
 .picker_month {
-    font-family: 'Rubik';
+    font-family: 'RubikMedium';
     font-size: 1rem;
     font-weight: 500;
     line-height: 20px;
     text-align: center;
+    color: $purple-gray;
 }
 
 .picker_year {
     font-size: 0.75rem;
-    line-height: 16px;
+    line-height: 1rem;
     text-align: center;
+    color: $purple-gray;
 }

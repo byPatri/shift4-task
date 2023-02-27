@@ -1,6 +1,8 @@
+@import '../../styles/variables/colors';
+
 .card {
     width: 600px;
-    background: #FFFFFF;
+    background: $white;
 
     @media (max-width: 600px) {
         width: 100%;
@@ -23,6 +25,7 @@
     }
 
     &_input_label {
+        font-family: 'WorkSansMedium';
         font-weight: 500;
         font-size: 0.875rem;
         line-height: 1.125rem;
@@ -48,7 +51,7 @@
     }
     
     &_input_icon:focus-visible  {
-        border: solid 1px #423C66;
+        border: solid 1px $blueGray50;
         outline: none;
     }
 }

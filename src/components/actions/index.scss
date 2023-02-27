@@ -1,3 +1,5 @@
+@import '../../styles//variables/colors';
+
 .actions {
     display: flex;
     justify-content: center;
@@ -17,8 +19,8 @@
 }
 
 .cancel {
-    border-color: #595D7B;
-    color: #595D7B;
+    border-color: $purple-gray;
+    color: $purple-gray;
 
     @media (max-width: 600px) {
         display: none;
@@ -34,8 +36,8 @@
  }
 
 .continue {
-    background: #423C66;
-    color: #FFFFFF;
+    background: $midnight-purple;
+    color: $white;
 }
 
 .continue:hover {

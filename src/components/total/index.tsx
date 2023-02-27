@@ -7,7 +7,8 @@ function differenceInMonths(date: Date) {
 
 const getTotal = (date: Date, amount?: string) => {
   if(!amount) return 0;
-  return parseFloat(amount) * differenceInMonths(date);
+  const amountToNumber = amount.replace(/\,/g, '')
+  return parseFloat(amountToNumber) * differenceInMonths(date);
 }
 
 function Total({ date, amount }: { date: Date, amount?: string }) {

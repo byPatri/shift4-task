@@ -1,20 +1,4 @@
-@font-face {
-  font-family: "Rubik";
-  src: url("./assets/fonts/Rubik-Regular.ttf") format("truetype");
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "WorkSans";
-  src: url("./assets//fonts/WorkSans-Regular.ttf") format("truetype");
-  font-weight: 400; 
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("./assets//fonts/Inter-Regular.ttf") format("truetype");
-  font-weight: 400; 
-}
+@import './styles/fonts/index.scss';
 
 #root {
     font-family: 'Work Sans';
