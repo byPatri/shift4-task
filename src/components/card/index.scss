@@ -47,12 +47,8 @@
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
+        max-width: 248px;
         height: 84px;
-    }
-    
-    &_input_icon:focus-visible  {
-        border: solid 1px $blueGray50;
-        outline: none;
     }
 }
 

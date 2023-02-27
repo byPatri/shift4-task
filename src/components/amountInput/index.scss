@@ -1,3 +1,5 @@
+@import '../../styles/variables/colors';
+
 .amount_input {
     height: 60px;
     padding: 16px 16px 16px 40px;
@@ -6,4 +8,15 @@
     background-position: 8px;
     border: solid 1px #E9EEF2;
     border-radius: 4px;
+
+    color: $purple-gray;
+    font-family: 'RubikMedium';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+}
+
+.amount_input:focus-visible  {
+    border: solid 1px $midnight-purple;
+    outline: none;
 }
