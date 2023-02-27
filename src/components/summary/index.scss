@@ -1,9 +1,11 @@
+@import '../../styles/variables/colors';
+
 .summary {
     margin-top: 24px;
     font-style: normal;
     font-size: 0.75rem;
     line-height: 1rem;
-    color: #1E2A32;
+    color: $text;;
 
     text-align: center;
     padding: 24px 16px;
