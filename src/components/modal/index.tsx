@@ -1,9 +1,11 @@
 import { ReactNode } from 'react';
+import ReactDom from 'react-dom';
 import close from '../../assets/icons/close_btn.svg';
 import './index.scss';
 
-function Modal ({ children }: { children: ReactNode }){
-    return (
+function Modal ({ children, isOpen }: { children: ReactNode, isOpen: boolean }){
+    if (!isOpen) return null;
+    return ReactDom.createPortal(
         <div className='modal'>
             <div className='modal_content'>
             <img
@@ -13,7 +15,8 @@ function Modal ({ children }: { children: ReactNode }){
             />
             {children}
             </div>
-        </div>
+        </div>,
+        document.getElementById('modal')!
     )
 }
 

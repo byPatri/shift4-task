@@ -15,7 +15,7 @@ function App() {
         />
       </header>
       <div className='content'>
-        <Modal>
+        <Modal isOpen={true}>
           <Card />
         </Modal>
       </div>
