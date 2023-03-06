@@ -5,6 +5,9 @@ const formatMajor = (value: string) => {
 };
 
 const formatAmount = (current: string, value: string) => {
+  if((value.match(/\D/g) || []).length > 0){
+    return current
+  }
   if((value.match(/\./g) || []).length > 1){
     return current
   }
