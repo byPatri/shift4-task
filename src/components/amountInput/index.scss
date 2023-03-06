@@ -1,13 +1,36 @@
 @import '../../styles/variables/colors';
 
+.wrapper {
+    height: 60px;
+    padding: 16px 16px 16px 16px;
+    border: solid 1px #E9EEF2;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    select {
+        font-family: 'Rubik';
+        font-weight: 500;
+        color: $purple-gray;
+        border: none;
+        border-left: 1px solid $border;
+        line-height: 1.75rem;
+        font-size: 1rem;
+        padding-left: 16px;
+        padding-right: 11px;
+    }
+}
+
 .amount_input {
     height: 60px;
+    width: 130px;
     padding: 16px 16px 16px 40px;
     background: url("../../assets/icons/dollar.svg") no-repeat left;
     background-size: 24px;
     background-position: 8px;
-    border: solid 1px #E9EEF2;
-    border-radius: 4px;
+    border: none;
+    display: inline-block;
 
     color: $purple-gray;
     font-family: 'RubikMedium';

@@ -47,3 +47,7 @@
 .continue:active {
     background: #241E47;
 }
+
+.continue[disabled] {
+    pointer-events: none;
+}

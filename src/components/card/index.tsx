@@ -7,22 +7,25 @@ import Summary from '../summary';
 import Total from '../total';
 import './index.scss'
 
-const getUpatedDate = (date: Date, months: number) => {
+const getUpatedDate = (date: Date, months: number): [Date, number] => {
   const now = new Date();
   const yearsDiffInMonths = (date.getFullYear() - now.getFullYear()) * 12
   const updatedDate = new Date();
   updatedDate.setMonth(date.getMonth() + months + yearsDiffInMonths)
-  return updatedDate;
+  const monthsQty = date.getMonth() - now.getMonth() + months + yearsDiffInMonths
+  return [updatedDate, monthsQty];
 }
 
 function Card() {
   const [amount, setAmount] = useState<string>('')
+  const [months, setMonths] = useState<number>(0)
   const [date, setDate] = useState(new Date())
 
   const changeDate = (months: number) => {
-    const updatedDate = getUpatedDate(date, months)
+    const [updatedDate, monthsQty] = getUpatedDate(date, months)
     if(updatedDate >= new Date())
     setDate(updatedDate);
+    setMonths(monthsQty)
   }
 
   return (
@@ -44,9 +47,9 @@ function Card() {
             </div>
           </div>
           <Total amount={amount} date={date} />
-          <Summary amount={amount} date={date} />
+          <Summary amount={amount} date={date} months={`${months}`} />
         </div>
-        <Actions />
+        <Actions isContinueDisabled={true}/>
       </div>
     </div>
   )

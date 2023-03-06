@@ -23,20 +23,27 @@ const formatAmount = (current: string, value: string) => {
 
 function AmountInput({ amount, setAmount }: { amount: string, setAmount: (value: string) => void}) {
   return (
-    <input 
-        value={amount}
-        className="amount_input"
-        placeholder='0.00'
-        onChange={(e) => {
-          const formattedAmount = formatAmount(amount, e.target.value);
-          setAmount(formattedAmount);
-        }}
-        onBlur={(e) => {
-          if(amount.match(/\.$/g)){
-            setAmount(amount.replace(/\.$/g, ''));
-          }
-        }}
-    />
+    <div className='wrapper'>
+      <input 
+          value={amount}
+          className="amount_input"
+          placeholder='0.00'
+          onChange={(e) => {
+            const formattedAmount = formatAmount(amount, e.target.value);
+            setAmount(formattedAmount);
+          }}
+          onBlur={(e) => {
+            if(amount.match(/\.$/g)){
+              setAmount(amount.replace(/\.$/g, ''));
+            }
+          }}
+      />
+      <select>
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="PLN">PLN</option>
+      </select>
+    </div>
   )
 }
 
